@@ -254,6 +254,34 @@ public class ArrayUtils {
         }
     }
 
-//
+// defines which array of two has more even elements
+    public static void arrayWithMoreEvenEl(int size, int min, int max){
+        int[] a = createRandomArray(size, min, max);
+        int[] b = createRandomArray(size, min, max);
+
+        printArray(a);
+        printArray(b);
+
+        int countA = 0;
+        for(int i = 0; i < a.length; i++){
+            if(a[i] % 2 == 0) countA++;
+        }
+
+        int countB = 0;
+        for(int i = 0; i < a.length; i++){
+            if(b[i] % 2 == 0) countB++;
+        }
+
+        if(countA > countB){
+            System.out.println("First array has more even numbers.");
+        } else if (countA < countB) {
+            System.out.println("Second array has more even numbers.");
+        } else {
+            System.out.println("Both arrays have equal number of even numbers.");
+        }
+
+    }
+
+
 
 }
